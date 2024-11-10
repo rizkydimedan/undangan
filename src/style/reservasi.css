@@ -1,0 +1,34 @@
+.rsvp-gift-section {
+    padding: 1rem;
+}
+
+.rsvp-gift-section h3{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Great Vibes", cursive;
+    color: #9e0050;
+    margin-bottom: 30px;
+}
+
+.rsvp-card, .bank-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gift-address {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .rsvp-gift-section h3, .rsvp-gift-section h4, .rsvp-gift-section h5 {
+        font-size: 1.2rem;
+    }
+    .bank-details .bank-card {
+        width: 100%;
+    }
+}

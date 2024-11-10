@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wedding Invitation</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <!-- Start Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <!-- Philosopher -->
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Dancing script -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- End Google Font -->
+
+    <!-- START Swiper css -->
+    <!-- <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- End Swiper css -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/jumbotron.css">
+    <link rel="stylesheet" href="../style/detail-pasangan.css">
+    <link rel="stylesheet" href="../style/event.css">
+    <link rel="stylesheet" href="../style/timeline.css">
+    <link rel="stylesheet" href="../style/gallery.css">
+    <link rel="stylesheet" href="../style/reservasi.css">
+
+
+
+    <script src="https://kit.fontawesome.com/c1d2872a82.js" crossorigin="anonymous"></script>
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8cdda 0%, #1d2b64 100%);
+            font-family: 'Philosopher';
+            color: #333;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: "Great Vibes", cursive;
+            color: #9e0050;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            margin-top: 1rem;
+        }
+
+        .rounded-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="rounded-card w-100 ">
+                    <!-- Image Section -->
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-sm-6 image-container">
+                            <img src="../img/flower.jpg" alt="Flower" class="rounded float-start w-100">
+                        </div>
+                        <div class="col-6 col-sm-6 image-container">
+                            <img src="../img/flower.jpg" alt="Flower" class="rounded float-end w-100">
+                        </div>
+                    </div>
+
+                    <!-- Title Section -->
+                    <div class="jumbotron text-center">
+                        <h4>The Wedding Off</h4>
+                        <p class="name-relationship countdown">Ajeng & Teddy</p>
+                        <p class="date countdown">Minggu <br> 10 • 11 • 2024</p>
+
+                        <!-- Countdown Display -->
+                        <div class="countdown d-flex justify-content-center gap-3" id="countdown">
+                            <div class="countdown-item">
+                                <span id="days">0</span>
+                                <label>Hari</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">0</span>
+                                <label>Jam</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">0</span>
+                                <label>Menit</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="seconds">0</span>
+                                <label>Detik</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Invitation -->
+                    <section>
+                        <div class="invitation">
+                            <h4 class="invitation-title">Kepada:</h4>
+                            <p class="invitation-subtitle">Yth. Bapak/Ibu/Saudara/i</p>
+                            <p class="invitation-name">Melisa</p>
+                        </div>
+
+                        <!-- Flower Pembatas -->
+                        <div class="text-center pt-5">
+                            <img src="../img/flower-pembatas.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <!-- Quotation Section -->
+                        <div class="quote-section text-center">
+                            <div>
+                                <h1><i class="fa-solid fa-quote-right quote-icon"></i></h1>
+                            </div>
+                            <div class="quote-text">
+                                <p class="arabic-quote">
+                                    وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا
+                                    اِلَيْهَا
+                                    وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ
+                                    يَّتَفَكَّرُوْنَ
+                                </p>
+                                <p class="translation">
+                                    Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri
+                                    dari
+                                    jenismu
+                                    sendiri,
+                                    supaya kamu merasa tenang dan tentram kepadanya, dan dijadikan-Nya diantaramu rasa
+                                    kasih dan
+                                    sayang.
+                                    Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+                                    berfikir.
+                                </p>
+                                <p class="source">Ar Rum: 21</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Divider -->
+                    <div class="flower-divider text-center">
+                        <img src="../img/flower-pembatas.jpg" class="img-fluid">
+                    </div>
+
+                    <!-- Relationship Detail Section -->
+                    <section class="relationship-section text-center">
+                        <div class="relationship-text">
+                            <h5 class="bismillah">بسم الله الرحمن الرحيم</h5>
+                            <p>Kami mohon do'a & restunya atas pernikahan kami</p>
+                        </div>
+
+                        <div class="relationship-couple d-flex flex-column">
+
+                            <div class="relationship-photo">
+                                <img src="../img/foto-prewed.webp" class="rounded-circle img-thumbnail"
+                                    alt="Pre-Wedding Photo">
+                                <h3>Ajeng Febian</h3>
+                                <p class="relationship-info">Putri ke-1 Bpk. Sumarni & Ibu Maryati</p>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+
+                            <h1 class="and-sign">&</h1>
+
+                            <div class="relationship-photo">
+                                <img src="../img/foto-prewed.webp" class="rounded-circle img-thumbnail"
+                                    alt="Pre-Wedding Photo">
+                                <h3>Teddy Prakarsa</h3>
+                                <p class="relationship-info">Putra ke-2 Bpk. Samuel & Ibu Masuya</p>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Flower Divider -->
+                    <div class="flower-divider text-center">
+                        <img src="../img/flower-pembatas.jpg" class="img-fluid">
+                    </div>
+
+                    <!-- Acara -->
+                    <section class="event-section text-center">
+                        <h2>Acara</h2>
+                        <p>Kami bermaksud untuk mengundang saudara/i dalam acara pernikahan kami pada:</p>
+
+                        <!-- Akad Nikah Section -->
+                        <div class="event-card">
+                            <h3>Akad Nikah</h3>
+                            <p class="date">Minggu, 01 Desember 2024</p>
+                            <p class="time">08:00 - 10:00 WIB</p>
+                            <p class="location">Hotel X-More<br>Hotel eL Royale, Jl. Merdeka No.2, Braga, Kec. Sumur
+                                Bandung,<br> Kota Bandung, Jawa Barat 40111</p>
+                            <div class="d-flex flex-row justify-content-center gap-2">
+                                <a href="#" class=" p-1 rounded-2 text-center text-white text-decoration-none">
+                                    <i class="fa-solid fa-calendar-check mr-2"></i>Simpan Tanggal
+                                </a>
+                                <a href="#" class="p-1  rounded-2 text-white text-decoration-none "><i
+                                        class="fa-solid fa-map-location-dot mr-2"></i>Navigasi Map</a>
+                            </div>
+                        </div>
+
+                        <!-- Separator -->
+                        <div class="separator">&</div>
+
+                        <!-- Resepsi Section -->
+                        <div class="event-card">
+                            <h3>Resepsi</h3>
+                            <p class="date">Minggu, 01 Desember 2024</p>
+                            <p class="time">11:00 - 14:00 WIB</p>
+                            <p class="location">Hotel X-More<br>Hotel eL Royale, Jl. Merdeka No.2, Braga, Kec. Sumur
+                                Bandung,<br> Kota Bandung, Jawa Barat 40111</p>
+                            <div class="d-flex flex-row justify-content-center gap-2">
+                                <a href="#" class=" p-1 rounded-2 text-center text-white text-decoration-none">
+                                    <i class="fa-solid fa-calendar-check mr-2"></i>Simpan Tanggal
+                                </a>
+                                <a href="#" class="p-1  rounded-2 text-white text-decoration-none "><i
+                                        class="fa-solid fa-map-location-dot mr-2"></i>Navigasi Map</a>
+                            </div>
+                        </div>
+
+                        <!-- Live Streaming Section -->
+                        <div class="live-stream pb-5">
+                            <p>Acara ini akan disiarkan langsung melalui media internet. Silakan klik tombol di bawah
+                                ini untuk
+                                membuka saluran live streaming.</p>
+                            <a href="#" class="live-stream-button"><i class="fa-solid fa-play mr-2"></i> Tonton Live
+                                Streaming</a>
+                        </div>
+                    </section>
+
+                    <!-- Flower Divider -->
+                    <div class="flower-divider text-center">
+                        <img src="../img/flower-pembatas.jpg" class="img-fluid">
+                    </div>
+
+                    <!--Start Timeline Pertemuan-->
+                    <section>
+                        <div class="card-container mt-5 pb-2 text-center">
+                            <div class="row">
+                                <h3 class="my-3">Kisah Cinta</h3>
+                                <div class="col-1">
+                                    <div class="p-1 text-center d-flex justify-content-center align-content-center rounded-circle text-white"
+                                        style="background-color: #9e0050; font-size:12px;"> <i
+                                            class="fa-solid fa-heart p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-11 ">
+                                    <div class="card-image pl-1">
+                                        <img src="../img/image-wide.jpeg" class="rounded-3" alt="Card Image"
+                                            width="100%">
+                                        <div class="overlay">
+                                            <div class="overlay-background"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-5">
+                                <div class="col">
+                                    <p> <span class="fw-semibold">Pertemuan Pertama</span> <br>
+                                        Kisah ini berawal ketika jumpa pandangan pertama di Kampus Perjuangan</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-container pb-2 text-center">
+                            <div class="row">
+                                <div class="col-1">
+                                    <div class="p-1 text-center d-flex justify-content-center align-content-center rounded-circle text-white"
+                                        style="background-color: #9e0050; font-size:12px;"> <i
+                                            class="fa-solid fa-heart p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-11 ">
+                                    <div class="card-image pl-1">
+                                        <img src="../img/image-wide.jpeg" class="rounded-3" alt="Card Image"
+                                            width="100%">
+                                        <div class="overlay">
+                                            <div class="overlay-background"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-5">
+                                <div class="col">
+                                    <p> <span class="fw-semibold">Lamaran</span> <br>
+                                        Tak disangka, cerita ini semakin erat untuk memperkokoh niat beribadah. Sehingga
+                                        prosesi
+                                        lamaran ini dilaksanakan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--END Timeline Pertemuan-->
+
+                    <!-- Flower Divider -->
+                    <div class="flower-divider text-center">
+                        <img src="../img/flower-pembatas.jpg" class="img-fluid">
+                    </div>
+
+                    <!--START Gallery -->
+                    <section class="gallery w-100 text-center mt-3">
+                        <h3>Gallery</h3>
+                        <div class="row  text-center d-flex justify-content-center">
+                            <div class="col-12" style="height: 250px;">
+                                <iframe src="//www.youtube.com/embed/Yfx3FYxOc7I" class="w-100 h-100 rounded"
+                                    frameborder="0"></iframe>
+                            </div>
+                        </div>
+
+                        <!-- Slider main container -->
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                            class="swiper mySwiper2 p-1">
+                            <!-- Thumbnail Swiper -->
+                            <div thumbsSlider="" class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <div class="swiper-button-next p-2 rounded-circle"></div>
+                                <div class="swiper-button-prev p-2 rounded-circle"></div>
+
+                            </div>
+
+                            <!-- Main Image Swiper -->
+                            <div class="swiper-wrapper" style="height: 300px;">
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Flower Divider -->
+                    <div class="flower-divider text-center w-100">
+                        <img src="../img/flower-pembatas.jpg" class="img-fluid">
+                    </div>
+
+                    <section class="rsvp-gift-section text-center">
+                        <h3>RSVP & Kado</h3>
+
+                        <!-- RSVP Card -->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Launch demo modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gift Options -->
+                        <h3 class="mt-4">Kado Pernikahan</h3>
+                        <p class="gift-info">Berikut adalah informasi untuk mengirimkan kado atau hadiah secara online
+                            atau melalui pengiriman fisik.</p>
+
+                        <!-- Bank Details -->
+                        <div class="bank-details d-flex flex-column align-items-center">
+                            <div class="bank-card mb-3 text-center w-100">
+                              <img src="../img/QRIS.jpg" class="object-fit-cover img-thumbnail min-w-50 max-w-75 " alt="">
+                            </div>
+                        </div>
+
+                        <!-- Address for Sending Gifts -->
+                        <div class="gift-address mt-4">
+                            <h5>Alamat Pengiriman Kado</h5>
+                            <p>Anda dapat mengirimkan kado dengan alamat berikut:</p>
+                            <address>Jalan Mawar No. 123, Kota Bandung, Jawa Barat, 40123</address>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        const countdownDate = new Date("2024-11-17T00:00:00").getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "The wedding has started!";
+            }
+        };
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="../../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="../js/swiper.js"></script>
