@@ -9,26 +9,40 @@
     color: #9e0050;
     margin-bottom: 30px;
 }
+.rsvp-gift-section .konfirmasi-kehadiran{
+    font-size: 15px;
+    background-color:  #9e0050;
+
+}
+
+.rsvp-gift-section .konfirmasi-kehadiran:hover{
+    background-color:  #9e0080;
+}
+
+.rsvp-gift-section .bank-info p{
+    font-size: 12px; 
+}
+
+.rsvp-gift-section .bank-info p span{
+    font-size: 15px; 
+    font-weight: 500;
+}
 
 .rsvp-card, .bank-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
 }
+
 
 .gift-address {
-    background-color: #f9f9f9;
+    font-size: 12px;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-    .rsvp-gift-section h3, .rsvp-gift-section h4, .rsvp-gift-section h5 {
-        font-size: 1.2rem;
-    }
-    .bank-details .bank-card {
-        width: 100%;
-    }
+.gift-address address {
+    color: #9e0050;
+    border: 1px dashed #9e0050;
+    border-radius: 5px; 
 }
+
+

@@ -1,11 +1,11 @@
-.gallery {
+.gallery-section {
     max-width: 1200px;
     /* margin: 50px auto; */
     text-align: center;
     /* padding: 20px; */
 }
 
-.gallery h3 {
+.gallery-section h3 {
     font-size: 30px;
     font-weight: 700;
     font-family: "Great Vibes", cursive;

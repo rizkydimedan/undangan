@@ -50,7 +50,7 @@
 .relationship-text h5 {
   font-size: 15px;
   font-weight: bold;
-  color: #ea4c4c;
+  color: #9e0050;
   font-family: "Scheherazade New", serif;
 }
 
@@ -93,7 +93,7 @@
 .and-sign {
   font-family: "Great Vibes", cursive;
   font-size: 60px;
-  color: #ea4c4c;
+  color: #9e0050;
   margin: 0 20px;
 }
 
@@ -108,7 +108,7 @@
 .social-icons a {
   text-decoration: none;
   color: #fff;
-  background-color: #ea4c4c;
+  background-color: #9e0050;
   width: 30px;
   height: 30px;
   display: flex;
@@ -119,6 +119,6 @@
 }
 
 .social-icons a:hover {
-  background-color: #d43f3f;
+  background-color: #9e0080;
   transform: scale(1.1);
 }
