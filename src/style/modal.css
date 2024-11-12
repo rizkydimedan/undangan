@@ -1,0 +1,21 @@
+.modal-content {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.btn-success:hover {
+    background-color: #28a745; /* Darker green on hover */
+    color: white;
+}
+
+.modal-header {
+    text-decoration: none;
+    border: none; /* Thicker border for header */
+}
+
+.modal-body {
+    padding: 20px; /* More padding for a spacious feel */
+}
+
+.rounded-3 {
+    border-radius: 0.5rem; /* Rounded corners */
+}

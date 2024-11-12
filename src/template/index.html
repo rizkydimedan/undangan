@@ -7,8 +7,7 @@
     <title>Wedding Invitation</title>
 
     <!-- Link to Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Start Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
@@ -21,12 +20,15 @@
     <!-- START Swiper css -->
     <!-- <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css"> -->
     <!-- End Swiper css -->
 
     <!-- AOS -->
     <link rel="stylesheet" href="../../node_modules/aos/dist/aos.css">
 
     <!-- CSS -->
+    <!-- <link rel="stylesheet" href="../style/cover.css"> -->
+    <link rel="stylesheet" href="../style/modal.css">
     <link rel="stylesheet" href="../style/jumbotron.css">
     <link rel="stylesheet" href="../style/detail-pasangan.css">
     <link rel="stylesheet" href="../style/event.css">
@@ -36,9 +38,8 @@
     <link rel="stylesheet" href="../style/message.css">
     <link rel="stylesheet" href="../style/ending-section.css">
 
-
-
     <script src="https://kit.fontawesome.com/c1d2872a82.js" crossorigin="anonymous"></script>
+
     <!-- Custom Styles -->
     <style>
         body {
@@ -69,12 +70,129 @@
     </style>
 </head>
 
-<body>
-    <!--  -->
+<body class="position-relative ">
+    <!-- COVER -->
+    <div class="min-vh-100 position-fixed top-0 left-0 w-100 d-block align-content-center"
+        style="background-color: pink; z-index: 9999; height: 100vh; padding: 20px; box-sizing: border-box;" id="cover">
+
+        <div class="text-center mt-3">
+            <img src="../img/flower-top.png" class="flower-img img-fluid" alt="Flower decoration">
+        </div>
+
+        <div class="text-center mt-4">
+            <h4 class="header-text">The Wedding Off</h4>
+            <p class="main-text">Ajeng & Teddy</p>
+        </div>
+
+        <div class="text-center mt-3">
+            <p class="main-text">Minggu <span class="fs-1 fw-normal">| <small class="fs-6">11</small> |</span>November
+                <br> 2024</p>
+        </div>
+
+        <div class="text-center mt-4">
+            <h4 class="header-text">Kepada:</h4>
+            <p class="main-text">Yth. Bapak/Ibu/Saudara/i</p>
+            <p class="main-text">Melisa</p>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="button" class="btn btn-primary button-style" id="openCover">Buka Undangan</button>
+        </div>
+
+        <div class="text-center mt-5">
+            <img src="../img/flower-pembatas.png" class="flower-pembatas img-fluid" alt="Flower divider">
+        </div>
+
+    </div>
+    <!-- COVER -->
+
+    <!-- Modal -->
+    <!-- Tombol vertikal di pojok kanan -->
+    <div class="position-fixed d-flex flex-column"
+        style="right: -30px; top: 400px; gap: 60px; z-index: 1; height: 100px; ">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#musicModal" id="link"
+            style="transform: rotate(90deg);">
+            Music
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#qrcodeModal"
+            style="transform: rotate(90deg);">
+            QR Code
+        </button>
+    </div>
+    <!-- Tombol vertikal di pojok kanan -->
+
+    <!-- Modal untuk Music -->
+    <div class="modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="musicModalLabel">Music Modal</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <iframe id="videoFrame" width="100%" height="315"
+                        src="https://www.youtube.com/embed/VDbVXpJWA-k?si=HTH9oH1X5uoS-SUu&amp;start=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <!-- Toggle Play/Pause button -->
+                    <div class="mt-3 text-center">
+                        <button id="toggleButton" class="btn btn-primary">Play</button>
+                    </div>
+                </div>
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk QR Code -->
+    <div class="modal fade" id="qrcodeModal" tabindex="-1" aria-labelledby="qrcodeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-3 shadow-lg">
+                <div class="modal-header text-white">
+                    <h1 class="modal-title fs-5" id="qrcodeModalLabel">QR Code Check-In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="w-100 py-3 border border-info rounded-3 text-success text-center">
+                        <p class="fs-6"><strong>Kamu Sudah Check In</strong></p>
+                        <button type="button" class="btn btn-success text-white h-25"
+                            style="transition: background-color 0.3s;">
+                            <small>Tampilkan QR Check-In</small>
+                        </button>
+                    </div>
+
+                    <div class="w-100 text-center my-4">
+                        <p class="fs-5">Gunakan QR untuk Check-In</p>
+                        <img src="../img/qr-1.jpg" alt="QR Code" class="img-fluid rounded border border-info">
+                    </div>
+
+                    <div class="w-100 text-center">
+                        <h5 class="text-primary">Melisa</h5>
+                        <p class="text-muted">ID: 2345234</p>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        style="background-color: #9e0050;">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- Navbar -->
     <nav class="navbar fixed-bottom mx-5 bg-white rounded-top-2 shadow-lg" id="navbar">
         <div class="container-fluid pt-2">
             <div class="d-flex justify-content-center w-100 gap-2">
-
                 <a class="nav-link icon-container home" href="#home"><i class="fa-regular fa-file-lines"></i></a>
                 <a class="nav-link icon-container detail" href="#detail"><i class="fa-regular fa-heart"></i></a>
                 <a class="nav-link icon-container gallery" href="#gallery"><i class="fa-regular fa-images"></i></a>
@@ -83,8 +201,10 @@
             </div>
         </div>
     </nav>
-    <!--  -->
-    <div class="container">
+    <!-- Navbar -->
+
+    <!-- CONTENT -->
+    <div class="container position-relative z-2 " id="index">
         <div class="row d-flex justify-content-center">
             <!-- MAIN  -->
             <div class="col-12 col-md-6 d-flex justify-content-center">
@@ -153,7 +273,8 @@
                         <!-- Quotation Section -->
                         <div class="quote-section text-center">
                             <div>
-                                <h1 data-aos="fade-up" data-aos-duration="1000"><i class="fa-solid fa-quote-right quote-icon"></i></h1>
+                                <h1 data-aos="fade-up" data-aos-duration="1000"><i
+                                        class="fa-solid fa-quote-right quote-icon"></i></h1>
                             </div>
                             <div class="quote-text">
                                 <p class="arabic-quote" data-aos="fade-up" data-aos-duration="1000">
@@ -179,13 +300,14 @@
                     </section>
 
                     <!-- Divider -->
-                    <div class="flower-divider text-center pt-3" id="detail" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="../img/flower-pembatas.png" class="img-fluid">
+                    <div class="flower-divider text-center pt-3" id="detail">
+                        <img src="../img/flower-pembatas.png" class="img-fluid" data-aos="fade-up"
+                            data-aos-duration="1000">
                     </div>
 
                     <!-- Relationship Detail Section -->
-                    <section class="relationship-section text-center" >
-                        <div class="relationship-text" data-aos="fade-up" data-aos-duration="1000" >
+                    <section class="relationship-section text-center">
+                        <div class="relationship-text" data-aos="fade-up" data-aos-duration="1000">
                             <h5 class="bismillah">بسم الله الرحمن الرحيم</h5>
                             <p>Kami mohon do'a & restunya atas pernikahan kami</p>
                         </div>
@@ -223,14 +345,16 @@
                     </section>
 
                     <!-- Flower Divider -->
-                    <div class="flower-divider text-center" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="../img/flower-pembatas.png" class="img-fluid">
+                    <div class="flower-divider text-center">
+                        <img src="../img/flower-pembatas.png" class="img-fluid" data-aos="fade-up"
+                            data-aos-duration="1000">
                     </div>
 
                     <!-- Acara -->
                     <section class="event-section text-center">
                         <h2 data-aos="fade-up" data-aos-duration="1000">Acara</h2>
-                        <p data-aos="fade-up" data-aos-duration="1000">Kami bermaksud untuk mengundang saudara/i dalam acara pernikahan kami pada:</p>
+                        <p data-aos="fade-up" data-aos-duration="1000">Kami bermaksud untuk mengundang saudara/i dalam
+                            acara pernikahan kami pada:</p>
 
                         <!-- Akad Nikah Section -->
                         <div class="event-card" data-aos="fade-up" data-aos-duration="1000">
@@ -269,24 +393,28 @@
 
                         <!-- Live Streaming Section -->
                         <div class="live-stream pb-5" data-aos="fade-up" data-aos-duration="1000">
-                            <p data-aos="fade-up" data-aos-duration="1000">Acara ini akan disiarkan langsung melalui media internet. Silakan klik tombol di bawah
+                            <p data-aos="fade-up" data-aos-duration="1000">Acara ini akan disiarkan langsung melalui
+                                media internet. Silakan klik tombol di bawah
                                 ini untuk
                                 membuka saluran live streaming.</p>
-                            <a href="#" class="live-stream-button" data-aos="fade-up" data-aos-duration="1000"><i class="fa-solid fa-play mr-2" data-aos="fade-up" data-aos-duration="1000"></i> Tonton Live
+                            <a href="#" class="live-stream-button" data-aos="fade-up" data-aos-duration="1000"><i
+                                    class="fa-solid fa-play mr-2" data-aos="fade-up" data-aos-duration="1000"></i>
+                                Tonton Live
                                 Streaming</a>
                         </div>
                     </section>
 
                     <!-- Flower Divider -->
-                    <div class="flower-divider text-center" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="../img/flower-pembatas.png" class="img-fluid">
+                    <div class="flower-divider text-center">
+                        <img src="../img/flower-pembatas.png" class="img-fluid" data-aos="fade-up"
+                            data-aos-duration="1000">
                     </div>
 
                     <!--Start Timeline Pertemuan-->
                     <section>
                         <div class="card-container mt-5 pb-2 text-center">
                             <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                                <h3 class="my-3" >Kisah Cinta</h3>
+                                <h3 class="my-3">Kisah Cinta</h3>
                                 <div class="col-1">
                                     <div class="p-1 text-center d-flex justify-content-center align-content-center rounded-circle text-white"
                                         style="background-color: #9e0050; font-size:12px;"> <i
@@ -313,7 +441,7 @@
 
                         <div class="card-container pb-2 text-center">
                             <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                                <div class="col-1" >
+                                <div class="col-1">
                                     <div class="p-1 text-center d-flex justify-content-center align-content-center rounded-circle text-white"
                                         style="background-color: #9e0050; font-size:12px;"> <i
                                             class="fa-solid fa-heart p-1"></i>
@@ -342,14 +470,16 @@
                     <!--END Timeline Pertemuan-->
 
                     <!-- Flower Divider -->
-                    <div class="flower-divider text-center" id="gallery" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="../img/flower-pembatas.png" class="img-fluid">
+                    <div class="flower-divider text-center" id="gallery">
+                        <img src="../img/flower-pembatas.png" class="img-fluid" data-aos="fade-up"
+                            data-aos-duration="1000">
                     </div>
 
                     <!--START Gallery -->
                     <section class="gallery-section w-100 text-center mt-3">
                         <h3 data-aos="fade-up" data-aos-duration="1000">Gallery</h3>
-                        <div class="row  text-center d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="row  text-center d-flex justify-content-center" data-aos="fade-up"
+                            data-aos-duration="1000">
                             <div class="col-12" style="height: 250px;">
                                 <iframe src="//www.youtube.com/embed/Yfx3FYxOc7I" class="w-100 h-100 rounded"
                                     frameborder="0"></iframe>
@@ -358,18 +488,21 @@
 
                         <!-- Slider main container -->
                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                            class="swiper mySwiper2 p-1" >
+                            class="swiper mySwiper2 p-1">
                             <!-- Thumbnail Swiper -->
                             <div thumbsSlider="" class="swiper mySwiper" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                        <img src="https://swiperjs.com/demos/images/nature-1.jpg"
+                                            class="object-fit-cover" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                        <img src="https://swiperjs.com/demos/images/nature-2.jpg"
+                                            class="object-fit-cover" />
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                        <img src="https://swiperjs.com/demos/images/nature-3.jpg"
+                                            class="object-fit-cover" />
                                     </div>
                                 </div>
 
@@ -380,7 +513,8 @@
                             </div>
 
                             <!-- Main Image Swiper -->
-                            <div class="swiper-wrapper" style="height: 300px;" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="swiper-wrapper" style="height: 300px;" data-aos="fade-up"
+                                data-aos-duration="1000">
                                 <div class="swiper-slide">
                                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                                 </div>
@@ -396,8 +530,9 @@
                     <!-- END Gallery -->
 
                     <!-- Flower Divider -->
-                    <div class="flower-divider text-center w-100" id="reservation" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="../img/flower-pembatas.png" class="img-fluid">
+                    <div class="flower-divider text-center w-100" id="reservation">
+                        <img src="../img/flower-pembatas.png" class="img-fluid" data-aos="fade-up"
+                            data-aos-duration="1000">
                     </div>
 
                     <!-- START Reservation -->
@@ -407,7 +542,8 @@
                         <!-- RSVP Card -->
                         <!-- Button trigger modal -->
                         <button type="button" class="btn konfirmasi-kehadiran text-white w-50" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" data-aos="fade-up" data-aos-duration="1000"><i class="fa-solid fa-user-check"></i> <br>
+                            data-bs-target="#exampleModal" data-aos="fade-up" data-aos-duration="1000"><i
+                                class="fa-solid fa-user-check"></i> <br>
                             Konformasi Kehadiran
                         </button>
 
@@ -441,7 +577,8 @@
                         <div class="pt-5 mt-5">
                             <!-- Gift Options -->
                             <h3 data-aos="fade-up" data-aos-duration="1000">Kado</h3>
-                            <p class="gift-info" data-aos="fade-up" data-aos-duration="1000">Berikut adalah informasi untuk mengirimkan kado atau hadiah secara
+                            <p class="gift-info" data-aos="fade-up" data-aos-duration="1000">Berikut adalah informasi
+                                untuk mengirimkan kado atau hadiah secara
                                 online
                                 atau melalui pengiriman fisik.</p>
 
@@ -468,7 +605,8 @@
                             </div>
 
                             <!-- Bank Details -->
-                            <div class="bank-details d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="bank-details d-flex flex-column align-items-center" data-aos="fade-up"
+                                data-aos-duration="1000">
                                 <p><strong>Transfer Pakai QRIS Bank BCA:</strong></p>
                                 <div class="bank-card mb-3 text-center">
                                     <img src="../img/QRIS.jpg" class="object-fit-cover img-thumbnail"
@@ -488,8 +626,9 @@
                     <!-- END Reservation -->
 
                     <!-- Flower Divider -->
-                    <div class="flower-divider text-center" id="message" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="../img/flower-pembatas.png" class="img-fluid">
+                    <div class="flower-divider text-center" id="message">
+                        <img src="../img/flower-pembatas.png" class="img-fluid" data-aos="fade-up"
+                            data-aos-duration="1000">
                     </div>
 
                     <!-- START message -->
@@ -544,12 +683,14 @@
 
                     <section class="ending-section mt-5 mx-3">
                         <h5 class="title text-center" data-aos="fade-up" data-aos-duration="1000">Instagram Stories</h5>
-                        <p class="text-center" data-aos="fade-up" data-aos-duration="1000">Ayo bagikan momen bahagia ini ke Instagram Story kamu. Download template
+                        <p class="text-center" data-aos="fade-up" data-aos-duration="1000">Ayo bagikan momen bahagia ini
+                            ke Instagram Story kamu. Download template
                             IG Story dibawah ini
                             dan posting di Instagram kamu!</p>
 
                         <div class="d-flex row gap-2 justify-content-center w-100 mb-5">
-                            <div class="card w-100 col-12" style="max-width: 600px;" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="card w-100 col-12" style="max-width: 600px;" data-aos="fade-up"
+                                data-aos-duration="1000">
                                 <div class="card-body d-flex align-items-center gap-3 text-white">
                                     <!-- Instagram Logo -->
                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -569,7 +710,8 @@
                                 </div>
                             </div>
 
-                            <div class="card w-100 col-12" style="max-width: 600px;" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="card w-100 col-12" style="max-width: 600px;" data-aos="fade-up"
+                                data-aos-duration="1000">
                                 <div class="card-body d-flex align-items-center gap-3 text-white">
                                     <!-- Instagram Logo -->
                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -596,12 +738,15 @@
                             <img src="../img/flower-pembatas.png" class="img-fluid">
                         </div>
 
-                        <h5 class="title text-center" data-aos="fade-up" data-aos-duration="1000">Protokol Kesehatan</h5>
-                        <p class="text-center" data-aos="fade-up" data-aos-duration="1000">Acara ini diselenggarakan dengan mematuhi protokol kesehatan. Semua tamu
+                        <h5 class="title text-center" data-aos="fade-up" data-aos-duration="1000">Protokol Kesehatan
+                        </h5>
+                        <p class="text-center" data-aos="fade-up" data-aos-duration="1000">Acara ini diselenggarakan
+                            dengan mematuhi protokol kesehatan. Semua tamu
                             undangan diwajibkan mematuhi Protokol Kesehatan ini.
                         </p>
 
-                        <div class="d-flex flex-row text-center justify-content-center gap-4" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="d-flex flex-row text-center justify-content-center gap-4" data-aos="fade-up"
+                            data-aos-duration="1000">
                             <ul class="list-group list-group-flush no-border">
                                 <li class="list-group-item compact-item">
                                     <div
@@ -681,17 +826,15 @@
             <!-- FOOTER -->
         </div>
     </div>
+    <!-- CONTENT -->
 
-  
-
-
+    <!-- Swiper -->
+    <script src="../../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="../../node_modules/swiper/swiper-element-bundle.min.mjs"></script>
 
     <!-- Bootstrap JS and Popper.js -->
-    <script src="../../node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- AOS -->
@@ -699,9 +842,13 @@
     <script>
         AOS.init();
     </script>
+
+    <script src="../js/openCover.js"></script>
     <script src="../js/setDate.js"></script>
     <script src="../js/swiper.js"></script>
     <script src="../js/nav-link.js"></script>
+
+
 </body>
 
 </html>
