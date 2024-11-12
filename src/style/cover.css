@@ -49,22 +49,21 @@
 }
 
 
-/* Fade-out animation for the cover */
-@keyframes fadeOut {
+/* Fade-in and translate-up animation for the index */
+@keyframes fadeIn {
     0% {
-        opacity: 1;
-        transform: translateY(100px);
+        opacity: 0;
+        transform: translateY(90px); /* Start from below */
     }
     100% {
-        opacity: 0;
-        transform: translateY(-80px); /* Move the element up */
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
     }
 }
 
-.cover.fade-out {
-    animation: fadeOut 1s ease-in-out forwards;
+.index.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
 }
-
 /* Fade-in and translate-up animation for the index */
 @keyframes fadeIn {
     0% {
