@@ -11,7 +11,7 @@ openCover.addEventListener('click', function () {
 
     if (!isPlaying) {
         videoFrame.src = "https://www.youtube.com/embed/VDbVXpJWA-k?si=HTH9oH1X5uoS-SUu&amp;autoplay=1";
-        toggleButton.textContent = "Pause";
+        
     }
 
     setTimeout(function () {
@@ -26,14 +26,16 @@ openCover.addEventListener('click', function () {
 }); 
 
 
+// Button Modal YT
 toggleButton.addEventListener('click', function () {
     if (!isPlaying) {
         videoFrame.src = "https://www.youtube.com/embed/VDbVXpJWA-k?si=HTH9oH1X5uoS-SUu&amp;autoplay=1";
-        toggleButton.textContent = "Pause";
+        toggleButton.innerHTML = '<i class="fa-solid fa-pause"></i>'; 
     } else {
-        videoFrame.src = "https://www.youtube.com/embed/VDbVXpJWA-k?si=HTH9oH1X5uoS-SUu&amp;";
-        toggleButton.textContent = "Play";
+        videoFrame.src = "https://www.youtube.com/embed/VDbVXpJWA-k?si=HTH9oH1X5uoS-SUu";
+        toggleButton.innerHTML = '<i class="fa-solid fa-play"></i>'; 
     }
+    
 
     isPlaying = !isPlaying;
 });
