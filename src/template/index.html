@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../../node_modules/aos/dist/aos.css">
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="../style/cover.css"> -->
+    <link rel="stylesheet" href="../style/cover.css">
     <link rel="stylesheet" href="../style/modal.css">
     <link rel="stylesheet" href="../style/jumbotron.css">
     <link rel="stylesheet" href="../style/detail-pasangan.css">
@@ -75,33 +75,45 @@
     <div class="min-vh-100 position-fixed top-0 left-0 w-100 d-block align-content-center"
         style="background-color: pink; z-index: 9999; height: 100vh; padding: 20px; box-sizing: border-box;" id="cover">
 
+       
         <div class="text-center mt-3">
             <img src="../img/flower-top.png" class="flower-img img-fluid" alt="Flower decoration">
         </div>
-
+        <div data-aos="zoom-in"  data-aos-duration="1500">
         <div class="text-center mt-4">
             <h4 class="header-text">The Wedding Off</h4>
-            <p class="main-text">Ajeng & Teddy</p>
+            <p class="main-text" style="font-size: 50px; font-family: Great Vibes, cursive;">Ajeng & Teddy</p>
         </div>
-
-        <div class="text-center mt-3">
-            <p class="main-text">Minggu <span class="fs-1 fw-normal">| <small class="fs-6">11</small> |</span>November
-                <br> 2024</p>
+        
+        <div class="row text-center d-flex justify-content-center align-items-center">
+            <div class="col-1 text-end">
+                <p class="main-text">Minggu</p>
+            </div>
+            <div class="col-1">
+                <p class="fs-1 fw-normal">| <small class="fs-6 fw-bold">11</small> |</p>
+            </div>
+            <div class="col-1 text-start main-text">
+                <p>November</p>
+            </div>
+            <div> 
+                <p style="font-size: 30px;">2024</p>
+            </div>
         </div>
 
         <div class="text-center mt-4">
             <h4 class="header-text">Kepada:</h4>
             <p class="main-text">Yth. Bapak/Ibu/Saudara/i</p>
-            <p class="main-text">Melisa</p>
+            <p class="main-text" style="font-size: 20px !important;">Melisa</p>
         </div>
 
         <div class="text-center mt-4">
-            <button type="button" class="btn btn-primary button-style" id="openCover">Buka Undangan</button>
+            <button type="button" class="btn text-white button-style" id="openCover">Buka Undangan</button>
         </div>
-
-        <div class="text-center mt-5">
+    </div>
+        <div class="text-center">
             <img src="../img/flower-pembatas.png" class="flower-pembatas img-fluid" alt="Flower divider">
         </div>
+  
 
     </div>
     <!-- COVER -->
