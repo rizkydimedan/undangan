@@ -1,10 +1,6 @@
 .min-vh-100 {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+
 }
 
 .flower-img {
@@ -17,12 +13,11 @@
 .flower-pembatas {
     max-width: 80%;
     max-height: 250px;
-
 }
 
 .button-style {
-    padding: 12px 24px;
-    font-size: 14px; 
+    padding: 6px 24px;
+    font-size: 14px;
     border-radius: 5px;
     background-color: #9e0050;
     border: none;
@@ -33,44 +28,27 @@
     background-color: #9e0080;
 }
 
-
 .main-text {
-    font-size: 14px; 
-   font-family: 'philosopher';
+    font-size: 14px;
+    font-family: 'Philosopher', sans-serif;
     color: #333;
 }
 
 .header-text {
-    font-size: 14px; 
+    font-size: 14px;
     font-weight: bold;
     color: #6c757d;
 }
 
-
-/* Fade-in and translate-up animation for the index */
+/* Fade-in animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(90px); /* Start from below */
+        transform: translateY(90px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* End at original position */
-    }
-}
-
-.index.fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
-}
-/* Fade-in and translate-up animation for the index */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(90px); /* Start from below */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* End at original position */
+        transform: translateY(0);
     }
 }
 
@@ -78,3 +56,49 @@
     animation: fadeIn 1s ease-in-out forwards;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .flower-img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .main-text {
+        font-size: 12px;
+    }
+
+    .header-text {
+        font-size: 12px;
+    }
+
+    .button-style {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-text {
+        font-size: 10px;
+    }
+
+    .header-text {
+        font-size: 10px;
+    }
+
+    .button-style {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+
+    .flower-img {
+        max-width: 120px;
+    }
+
+    
+     /* Maintain 3 columns on small screens */
+     .col-4 {
+        flex: 0 0 33.3333%; /* Ensure columns are equal, 3 columns of 33.33% width */
+        max-width: 33.3333%;
+    }
+}
