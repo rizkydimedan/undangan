@@ -19,9 +19,9 @@ openCover.addEventListener('click', function () {
         cover.classList.remove('d-block');
         cover.classList.add('d-none', 'fade-out');
         
-        // Show the index with fade-in effect
-        index.classList.add('d-block', 'fade-in');
-        index.classList.remove('d-none');
+        // // Show the index with fade-in effect
+        // index.classList.add('d-block', 'fade-in');
+        // index.classList.remove('d-none');
     }, 500);
 }); 
 
