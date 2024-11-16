@@ -26,7 +26,7 @@ function setActive(link) {
 // Fungsi untuk mengecek apakah elemen berada di dalam viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
-  return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  return rect.top >= -5 && rect.bottom <= window.innerHeight;
 }
 
 // Event handler onscroll untuk window
